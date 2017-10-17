@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Jobzz - Job Type Selection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Webflow">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/framework.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/webfont.js"></script>
+    <script>
+    WebFont.load({
+      google: {
+        families: ["Montserrat:400,700"]
+      }
+    });
+    </script>
+    <script type="text/javascript" src="js/modernizr.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="images/jobzzlogo.png">
+    <link rel="apple-touch-icon" href="images/jobzzlogo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+
+    <div style="width:100%;margin-left:auto;margin-right:auto;height:40px;">
+        <a id="BackButton" onclick="javascript: BackButtonClickHandler();" href="#" style="text-decoration:none !important;">
+            <img src="images/leftBlack.png" style="width:40px;float:left;margin-top:0px !important;" />
+        </a>
+
+    </div>
+
+
+
+    <!-- CONSTRUCTION PANEL -->
+    <div id="ConstructionPanel" style="width:100% !important;">
+
+        <input id="ConstructionButton" onclick="javascript: ConstructionButtonClickHandler();" class="action-button w-button" type="button" value="CONSTRUCTION"
+               style="width:100% !important;height:100% !important;font-size:24px !important;outline:none !important;color:#FDC603 !important;
+                           font-family:AvenirNextLTW01BoldRegular !important;border-color:#FDC603 !important;">
+    </div>
+    <!-- CONSTRUCTION PANEL -->
+
+
+    <!-- FARM WORK PANEL -->
+    <div id="FarmWorkPanel" style="width:100% !important;">
+
+        <input id="FarmWorkButton" onclick="javascript: FarmWorkButtonClickHandler();" class="whitebutton w-button" type="button" value="FARM WORK"
+               style="width:100% !important;height:100% !important;font-size:24px !important;outline:none !important;color:#000000 !important;
+                       font-family:AvenirNextLTW01BoldRegular !important;">
+    </div>
+    <!-- FARM WORK PANEL -->
+
+
+    <!-- LANDSCAPING PANEL -->
+    <div id="LandscapingPanel" style="width:100% !important;">
+
+        <input id="LandscapingButton" onclick="javascript: LandscapingButtonClickHandler();" class="action-button w-button" type="button" value="LANDSCAPING"
+               style="width:100% !important;height:100% !important;font-size:24px !important;outline:none !important;color:#FDC603 !important;
+                       font-family:AvenirNextLTW01BoldRegular !important;">
+    </div>
+    <!-- LANDSCAPING PANEL -->
+
+
+
+
+    <div class="loading-mask page-content stop-loading" id="LoadingPanel">
+        <div class="loading-icon">
+            <div class="icon ion-load-d navbar-button-icon"></div>
+        </div>
+    </div>
+
+
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/framework.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+
+    <script type="text/javascript" src="scripts/common.js"></script>
+    <script type="text/javascript" src="scripts/jobtypeselectionmenu.js"></script>
+
+
+    <script type="text/javascript">
+        SetUp();
+    </script>
+
+    <!--[if lte IE 9]><script src="js/placeholders.min.js"></script><![endif]-->
+</body>
+</html>

@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Jobzz - Invoice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Webflow">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/framework.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/webfont.js"></script>
+    <script>
+    WebFont.load({
+      google: {
+        families: ["Montserrat:400,700"]
+      }
+    });
+    </script>
+    <script type="text/javascript" src="js/modernizr.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="images/jobzzlogo.png">
+    <link rel="apple-touch-icon" href="images/jobzzlogo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <section class="mobile-wrapper w-section" style="height:550px !important;">
+
+        <div style="width:100%;margin-left:auto;margin-right:auto;height:40px;">
+            <a id="BackButton" onclick="javascript: BackButtonClickHandler();" href="#" style="text-decoration:none !important;">
+                <img src="images/leftBlack.png" style="width:40px;float:left;margin-top:0px !important;" />
+            </a>
+
+        </div>
+
+
+
+
+        <center style="margin-top:10px !important;">
+            <input id="InvoiceButton" class="whitebutton w-button" type="button" value="INVOICE"
+                   style="width:100% !important;height:30px !important;font-size:24px !important;font-family:AvenirNextLTW01BoldRegular !important;
+                                        border:none !important;text-decoration:none !important;outline:none !important;">
+        </center>
+
+
+
+
+
+        <div class="page-content" id="main-stack">
+
+            <!--<br />-->
+
+            <div class="body padding">
+                <div class="w-form" style="margin-top:-20px !important;">
+
+                    <form data-name="Email Form" id="email-form" name="email-form" action="#">
+
+
+                        <input id="AddressTitleButton" class="whitebutton w-button" type="button" value="ADDRESS"
+                               style="width:100% !important;height:30px !important;font-size:14px !important;font-family:AvenirNextLTW01BoldRegular !important;
+                                        border:none !important;text-decoration:none !important;outline:none !important;color:#ACACAC !important;">
+
+                        <input id="AddressFirstLineButton" class="whitebutton w-button" type="button" value=""
+                               style="width:100% !important;height:30px !important;font-size:14px !important;font-family:AvenirNextLTW01BoldRegular !important;
+                                        border:none !important;text-decoration:none !important;outline:none !important;margin-top:-5px !important;">
+
+                        <input id="AddressSecondLineButton" class="whitebutton w-button" type="button" value=""
+                               style="width:100% !important;height:30px !important;font-size:14px !important;font-family:AvenirNextLTW01BoldRegular !important;
+                                        border:none !important;text-decoration:none !important;outline:none !important;margin-top:-5px !important;">
+
+
+
+
+
+                        <input id="MeetingTimeTitleButton" class="whitebutton w-button" type="button" value="MEETING TIME"
+                               style="width:100% !important;height:30px !important;font-size:14px !important;font-family:AvenirNextLTW01BoldRegular !important;
+                                        border:none !important;text-decoration:none !important;outline:none !important;color:#ACACAC !important;margin-top:15px !important;">
+
+                        <input id="MeetingTimeButton" class="whitebutton w-button" type="button" value=""
+                               style="width:100% !important;height:30px !important;font-size:14px !important;font-family:AvenirNextLTW01BoldRegular !important;
+                                        border:none !important;text-decoration:none !important;outline:none !important;margin-top:-5px !important;">
+
+
+
+
+
+
+
+                        <input id="PaymentMethodTitleButton" class="whitebutton w-button" type="button" value="PAYMENT METHOD"
+                               style="width:100% !important;height:30px !important;font-size:14px !important;font-family:AvenirNextLTW01BoldRegular !important;
+                                        border:none !important;text-decoration:none !important;outline:none !important;color:#ACACAC !important;margin-top:15px !important;">
+
+                        <input id="PaymentMethodButton" class="whitebutton w-button" type="button" value=""
+                               style="width:100% !important;height:30px !important;font-size:14px !important;font-family:AvenirNextLTW01BoldRegular !important;
+                                        border:none !important;text-decoration:none !important;outline:none !important;margin-top:-5px !important;">
+
+
+
+
+
+
+
+
+                        <input id="FeesButton" class="whitebutton w-button" type="button" value=""
+                               style="width:100% !important;height:30px !important;font-size:14px !important;font-family:AvenirNextLTW01BoldRegular !important;
+                                        border:none !important;text-decoration:none !important;outline:none !important;margin-top:15px !important;">
+
+                        <input id="TotalFeesButton" class="whitebutton w-button" type="button" value="$64"
+                               style="width:100% !important;height:30px !important;font-size:30px !important;font-family:AvenirNextLTW01BoldRegular !important;
+                                        border:none !important;text-decoration:none !important;outline:none !important;margin-top:-5px !important;">
+
+                      
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="loading-mask page-content stop-loading" id="LoadingPanel">
+            <div class="loading-icon">
+                <div class="icon ion-load-d navbar-button-icon"></div>
+            </div>
+        </div>
+
+
+
+
+        <!-- SIGN UP FOOTER PANEL -->
+        <div style="width:100% !important;position:fixed;bottom:0;">
+            <input id="NextButton" onclick="javascript: CompleteButtonClickHandler();" class="action-button w-button" type="button" value="TAP TO COMPLETE"
+                   style="width:100% !important;height:70px !important;font-size:18px !important;outline:none !important;color:#FDC603 !important;font-family:AvenirNextLTW01BoldRegular !important;">
+        </div>
+        <!-- SIGN UP FOOTER PANEL -->
+
+
+
+
+
+
+        <input id="SelectPictureButtonWidget" type="file" name="SelectPictureButtonWidget" style="visibility:hidden" />
+
+
+
+    </section>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/framework.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="scripts/common.js"></script>
+    <script type="text/javascript" src="scripts/invoice.js"></script>
+
+
+    <script type="text/javascript">
+        SetUp();
+    </script>
+
+    <!--[if lte IE 9]><script src="js/placeholders.min.js"></script><![endif]-->
+</body>
+</html>

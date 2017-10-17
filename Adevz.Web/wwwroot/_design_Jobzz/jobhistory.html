@@ -1,0 +1,362 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Jobzz - Notifications</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Webflow">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/framework.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/webfont.js"></script>
+    <script>
+    WebFont.load({
+      google: {
+        families: ["Montserrat:400,700"]
+      }
+    });
+    </script>
+    <script type="text/javascript" src="js/modernizr.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="images/jobzzlogo.png">
+    <link rel="apple-touch-icon" href="images/jobzzlogo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <section class="mobile-wrapper w-section" style="height:350px !important;">
+
+        <div style="width:100%;margin-left:auto;margin-right:auto;height:40px;">
+            <a id="BackButton" onclick="javascript: BackButtonClickHandler();" href="#" style="text-decoration:none !important;">
+                <img src="images/leftBlack.png" style="width:40px;float:left;margin-top:0px !important;" />
+            </a>
+
+            
+        </div>
+
+
+       <center id="NoJobsPanel" style="margin-top:200px !important;display:none;">
+           <span id="NoJobsLabel" style="font-family:AvenirNextLTW01RegularRegular !important;color:#ACACAC !important;font-size:18px !important;">
+               Visit the marketplace to start getting work done ! your job history will appear here
+           </span>
+       </center>
+            
+        
+
+
+        <div id="JobHistoryPanel" class="body" style="margin-top:-46px !important;">
+
+
+
+            
+            
+
+
+
+
+            <input id="BookedJobsButton" class="action-button w-button" type="button" value="Booked Jobs"
+                   style="width:100% !important;height:40px!important;font-size:16px !important;outline:none !important;color:#FDC603 !important;
+                           font-family:AvenirNextLTW01BoldRegular !important;border-color:#FDC603 !important;line-height:10px !important;display:none;">
+
+
+            <ul id="BookedJobsPanel" class="list list-messages" style="display:none;">
+
+              
+                <!--<li class="list-message" data-ix="list-item">
+
+                    <a class="w-clearfix w-inline-block" data-load="1" href="#" onclick="JobButtonClickHandler()">
+                        <div style="width:130px !important;height:20px !important;color:#FDC603 !important; font-family:AvenirNextLTW01BoldRegular !important;float:right;">
+                            <center> Booked </center>
+                            <center style="margin-top:5px !important;"><span style="font-family:AvenirNextLTW01BoldRegular !important;color:#000000 !important;font-size:16px !important;">$80</span></center>
+                        </div>
+                        <div class="column-left w-clearfix">
+                        <div class="image-message">
+                        <img src="images/job.png">
+                        </div>
+                        </div>
+                        <div class="column-right">
+                        <div class="message-title">Construction</div>
+                        <div class="message-text">
+                            <img style="width:25px; height:25px; border-radius: 25px;" src="images/128.jpg"> 
+                            John Doe
+                        </div>
+                        </div>
+                        <div style="width:130px !important;height:20px !important;background-color:#000000 !important;color:#FDC603 !important; font-family:AvenirNextLTW01BoldRegular !important;float:right;">
+                            <center> 4 days away </center>
+                        </div>
+                        </a>
+                </li>
+
+
+                <li class="list-message" data-ix="list-item">
+
+                    <a class="w-clearfix w-inline-block" data-load="1" href="#"  onclick="JobButtonClickHandler()">
+                        <div style="width:130px !important;height:20px !important;color:#FDC603 !important; font-family:AvenirNextLTW01BoldRegular !important;float:right;"> 
+                            <center> Booked </center>
+                            <center style="margin-top:5px !important;"><span style="font-family:AvenirNextLTW01BoldRegular !important;color:#000000 !important;font-size:16px !important;">$60</span></center>
+                        </div>
+                        <div class="column-left w-clearfix">
+                            <div class="image-message">
+                                <img src="images/landscaping.png">
+                            </div>
+                        </div>
+                        <div class="column-right">
+                            <div class="message-title">Landscaping</div>
+                            <div class="message-text">
+                                <img style="width:25px; height:25px; border-radius: 25px;" src="images/128 (3).jpg"> 
+                                Jane Smith
+                            </div>
+                        </div>
+                        <div style="width:130px !important;height:20px !important;background-color:#000000 !important;color:#FDC603 !important; font-family:AvenirNextLTW01BoldRegular !important;float:right;">
+                            <center> 10 days away </center>
+                        </div>
+                    </a>
+                </li>-->
+
+            </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <input id="OpenJobsButton" class="yellowbutton w-button" type="button" value="Open Jobs"
+                   style="width:100% !important;height:40px!important;font-size:16px !important;outline:none !important;color:#000000 !important;
+                           font-family:AvenirNextLTW01BoldRegular !important;border-color:#FDC603 !important;line-height:10px !important;margin-top:-10px !important;display:none;">
+
+
+
+            <ul id="OpenJobsPanel" class="list list-messages" style="display:none;">
+
+
+                <!--<li class="list-message" data-ix="list-item">
+
+                    <a class="w-clearfix w-inline-block" data-load="1" href="#" onclick="JobButtonClickHandler()">
+                        <div style="width:130px !important;height:20px !important;color:#FDC603 !important; font-family:AvenirNextLTW01BoldRegular !important;float:right;">
+                            <center> Open </center>
+                            <center style="margin-top:5px !important;"><span style="font-family:AvenirNextLTW01BoldRegular !important;color:#000000 !important;font-size:16px !important;">$60</span></center>
+                        </div>
+                        <div class="column-left w-clearfix">
+                            <div class="image-message">
+                                <img src="images/farming.png">
+                            </div>
+                        </div>
+                        <div class="column-right">
+                            <div class="message-title">Farming</div>
+                            <div class="message-text">
+                                No Worker Yet
+                            </div>
+                        </div>
+                        <div style="width:130px !important;height:20px !important;background-color:#000000 !important;color:#FDC603 !important; font-family:AvenirNextLTW01BoldRegular !important;float:right;">
+                            <center> 2 days away </center>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="list-message" data-ix="list-item">
+
+                    <a class="w-clearfix w-inline-block" data-load="1" href="#" onclick="JobButtonClickHandler()">
+                        <div style="width:130px !important;height:20px !important;color:#FDC603 !important; font-family:AvenirNextLTW01BoldRegular !important;float:right;">
+                            <center> Open </center>
+                            <center style="margin-top:5px !important;"><span style="font-family:AvenirNextLTW01BoldRegular !important;color:#000000 !important;font-size:16px !important;">$60</span></center>
+                        </div>
+                        <div class="column-left w-clearfix">
+                            <div class="image-message">
+                                <img src="images/landscaping.png">
+                            </div>
+                        </div>
+                        <div class="column-right">
+                            <div class="message-title">Landscaping</div>
+                            <div class="message-text">
+                                No Worker Yet
+                            </div>
+                        </div>
+                        <div style="width:130px !important;height:20px !important;background-color:#000000 !important;color:#FDC603 !important; font-family:AvenirNextLTW01BoldRegular !important;float:right;">
+                            <center> 8 days away </center>
+                        </div>
+                    </a>
+                </li>-->
+
+
+
+            </ul>
+
+
+
+
+
+
+
+
+            <input id="CompletedJobsButton" class="action-button w-button" type="button" value="Completed Jobs"
+                   style="width:100% !important;height:40px!important;font-size:16px !important;outline:none !important;color:#FDC603 !important;
+                           font-family:AvenirNextLTW01BoldRegular !important;border-color:#FDC603 !important;line-height:10px !important;margin-top:-10px !important;display:none;">
+
+
+            <ul id="CompletedJobsPanel" class="list list-messages" style="display:none;">
+
+
+                <!--<li class="list-message" data-ix="list-item">
+
+                    <a class="w-clearfix w-inline-block" data-load="1" href="#" onclick="JobButtonClickHandler()">
+                        <div style="width:130px !important;height:20px !important;color:#FDC603 !important; font-family:AvenirNextLTW01BoldRegular !important;float:right;">
+                            <center> Completed </center>
+                            <center style="margin-top:5px !important;"><span style="font-family:AvenirNextLTW01BoldRegular !important;color:#000000 !important;font-size:16px !important;">$60</span></center>
+                        </div>
+                        <div class="column-left w-clearfix">
+                            <div class="image-message">
+                                <img src="images/farming.png">
+                            </div>
+                        </div>
+                        <div class="column-right">
+                            <div class="message-title">Farming</div>
+                            <div class="message-text">
+                                <img style="width:25px; height:25px; border-radius: 25px;" src="images/jobzzlogo.png">
+                                Remy Ma
+                            </div>
+                        </div>
+                        <div style="width:130px !important;height:20px !important;background-color:#000000 !important;color:#FDC603 !important; font-family:AvenirNextLTW01BoldRegular !important;float:right;">
+                            <center> 2 days ago </center>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="list-message" data-ix="list-item">
+
+                    <a class="w-clearfix w-inline-block" data-load="1" href="#" onclick="JobButtonClickHandler()">
+                        <div style="width:130px !important;height:20px !important;color:#FDC603 !important; font-family:AvenirNextLTW01BoldRegular !important;float:right;">
+                            <center> Completed </center>
+                            <center style="margin-top:5px !important;"><span style="font-family:AvenirNextLTW01BoldRegular !important;color:#000000 !important;font-size:16px !important;">$60</span></center>
+                        </div>
+                        <div class="column-left w-clearfix">
+                            <div class="image-message">
+                                <img src="images/landscaping.png">
+                            </div>
+                        </div>
+                        <div class="column-right">
+                            <div class="message-title">Landscaping</div>
+                            <div class="message-text">
+                                <img style="width:25px; height:25px; border-radius: 25px;" src="images/128 (2).jpg">
+                                Fat Joe
+                            </div>
+                        </div>
+                        <div style="width:130px !important;height:20px !important;background-color:#000000 !important;color:#FDC603 !important; font-family:AvenirNextLTW01BoldRegular !important;float:right;">
+                            <center> 8 days ago </center>
+                        </div>
+                    </a>
+                </li>-->
+
+
+
+            </ul>
+
+
+
+
+
+
+
+
+
+
+
+            <input id="CancelledJobsButton" class="yellowbutton w-button" type="button" value="Cancelled Jobs"
+                   style="width:100% !important;height:40px!important;font-size:16px !important;outline:none !important;color:#000000 !important;
+                           font-family:AvenirNextLTW01BoldRegular !important;border-color:#FDC603 !important;line-height:10px !important;margin-top:-10px !important;display:none;">
+
+
+
+            <ul id="CancelledJobsPanel" class="list list-messages" style="display:none;">
+
+
+                <!--<li class="list-message" data-ix="list-item">
+
+                    <a class="w-clearfix w-inline-block" data-load="1" href="#" onclick="JobButtonClickHandler()">
+                        <div style="width:130px !important;height:20px !important;color:#FDC603 !important; font-family:AvenirNextLTW01BoldRegular !important;float:right;">
+                            <center> Cancelled </center>
+                            <center style="margin-top:5px !important;"><span style="font-family:AvenirNextLTW01BoldRegular !important;color:#000000 !important;font-size:16px !important;">$60</span></center>
+                        </div>
+                        <div class="column-left w-clearfix">
+                            <div class="image-message">
+                                <img src="images/farming.png">
+                            </div>
+                        </div>
+                        <div class="column-right">
+                            <div class="message-title">Farming</div>
+                            <div class="message-text">
+                                <img style="width:25px; height:25px; border-radius: 25px;" src="images/jobzzlogo.png">
+                               John Legend
+                            </div>
+                        </div>
+                        <div style="width:130px !important;height:20px !important;background-color:#000000 !important;color:#FDC603 !important; font-family:AvenirNextLTW01BoldRegular !important;float:right;">
+                            <center> 2 days ago </center>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="list-message" data-ix="list-item">
+
+                    <a class="w-clearfix w-inline-block" data-load="1" href="#" onclick="JobButtonClickHandler()">
+                        <div style="width:130px !important;height:20px !important;color:#FDC603 !important; font-family:AvenirNextLTW01BoldRegular !important;float:right;">
+                            <center> Cancelled </center>
+                            <center style="margin-top:5px !important;"><span style="font-family:AvenirNextLTW01BoldRegular !important;color:#000000 !important;font-size:16px !important;">$60</span></center>
+                        </div>
+                        <div class="column-left w-clearfix">
+                            <div class="image-message">
+                                <img src="images/landscaping.png">
+                            </div>
+                        </div>
+                        <div class="column-right">
+                            <div class="message-title">Landscaping</div>
+                            <div class="message-text">
+                                <img style="width:25px; height:25px; border-radius: 25px;" src="images/128 (1).jpg">
+                                James Dolan
+                            </div>
+                        </div>
+                        <div style="width:130px !important;height:20px !important;background-color:#000000 !important;color:#FDC603 !important; font-family:AvenirNextLTW01BoldRegular !important;float:right;">
+                            <center> 8 days away </center>
+                        </div>
+                    </a>
+                </li>-->
+
+
+
+            </ul>
+
+
+
+        </div>
+
+        <div class="loading-mask page-content stop-loading" id="LoadingPanel">
+            <div class="loading-icon">
+                <div class="icon ion-load-d navbar-button-icon"></div>
+            </div>
+        </div>
+
+    </section>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/framework.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+
+    <script type="text/javascript" src="scripts/common.js"></script>
+    <script type="text/javascript" src="scripts/jobhistory.js"></script>
+
+
+    <script type="text/javascript">
+        SetUp();
+    </script>
+
+    <!--[if lte IE 9]><script src="js/placeholders.min.js"></script><![endif]-->
+</body>
+</html>

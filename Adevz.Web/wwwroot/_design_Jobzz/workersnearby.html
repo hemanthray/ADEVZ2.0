@@ -1,0 +1,316 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Jobzz - Workers Near By</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Webflow">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/framework.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/webfont.js"></script>
+    <script>
+    WebFont.load({
+      google: {
+        families: ["Montserrat:400,700"]
+      }
+    });
+    </script>
+    <script type="text/javascript" src="js/modernizr.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="images/jobzzlogo.png">
+    <link rel="apple-touch-icon" href="images/jobzzlogo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+   
+   
+
+    <section class="mobile-wrapper w-section">
+        <div class="page-content" id="main-stack">
+
+
+
+            <!-- SLIDE OUT MENU -->
+            <div class="navbar w-nav" data-animation="over-right" data-collapse="all" data-contain="1" data-duration="400" data-easing="ease-out-quint" data-no-scroll="1">
+                <div class="w-container">
+                    <nav class="bg-gradient nav-menu w-nav-menu" role="navigation" style="background-color:#000000 !important;">
+
+
+                        <a class="menu-close-button" href="#">
+                            <img src="images/menuYellow.png" style="width:40px !important;height:40px !important;" />
+                            
+                        </a>
+                        <div class="nav-menu-header">
+
+
+
+                        </div>
+
+                        <div id="MenuProfilePicturePanel" style="width:120% !important;height:180px;background-color:#000000 !important;
+                                margin-left:-24px !important;background-image:url(images/constructiontools.jpg);
+                                background-position:center" onclick="javascript: MenuProfilePicturePanelClickHandler();">
+                            <center>
+                                <img id="ProfilePicture" src="images/jobzzlogo.png" style="width:96px !important;height:96px !important;margin-top:30px !important;
+                                        border-radius: 50% !important;" />
+                            </center>
+
+                            <center style="color:#FFFFFF !important;">
+                                <span id="PictureLabel" style="font-family:AvenirNextLTW01BoldRegular !important;font-weight:bold !important;">tap to upload your profile picture</span>
+                            </center>
+                        </div>
+
+
+
+
+                        <input id="MarketPlaceButton" onclick="javascript: MarketPlaceButtonClickHandler();" class="action-button w-button" type="button" value="MARKETPLACE"
+                               style="width:100% !important;height:40px !important;font-size:20px !important;outline:none !important;color:#FDC603 !important;
+                               font-family:AvenirNextLTW01BoldRegular !important;margin-top:25px !important;">
+
+
+                        <input id="PostRequestButton" onclick="javascript: PostRequestButtonClickHandler();" class="action-button w-button" type="button" value="POST REQUEST"
+                               style="width:100% !important;height:40px !important;font-size:20px !important;outline:none !important;color:#FFFFFF !important;
+                               font-family:AvenirNextLTW01BoldRegular !important;margin-top:10px !important;">
+
+
+                        <input id="PostRequestButton" onclick="javascript: NotificationsButtonClickHandler();" class="action-button w-button" type="button" value="NOTIFICATIONS"
+                               style="width:100% !important;height:40px !important;font-size:20px !important;outline:none !important;color:#FFFFFF !important;
+                               font-family:AvenirNextLTW01BoldRegular !important;margin-top:10px !important;">
+
+
+                        <input id="AccountButton" onclick="javascript: AccountButtonClickHandler();" class="action-button w-button" type="button" value="ACCOUNT"
+                               style="width:100% !important;height:40px !important;font-size:20px !important;outline:none !important;color:#FFFFFF !important;
+                               font-family:AvenirNextLTW01BoldRegular !important;margin-top:10px !important;">
+
+
+
+                        <input id="NeedAJobButton" onclick="javascript: NeedAJobButtonClickHandler();" class="action-button w-button" type="button" value="NEED A JOB ?"
+                               style="width:100% !important;height:40px !important;font-size:20px !important;outline:none !important;color:#FFFFFF !important;
+                               font-family:AvenirNextLTW01BoldRegular !important;margin-top:10px !important;">
+
+
+                        <input id="LogOutButton" onclick="javascript: LogOutButtonClickHandler();" class="action-button w-button" type="button" value="LOG OUT"
+                               style="width:100% !important;height:40px !important;font-size:20px !important;outline:none !important;color:#FFFFFF !important;
+                               font-family:AvenirNextLTW01BoldRegular !important;margin-top:10px !important;">
+
+
+
+
+
+
+                        <div class="separator-bottom"></div>
+                        <div class="separator-bottom"></div>
+                        <div class="separator-bottom"></div>
+                    </nav>
+                    <div class="wrapper-mask" data-ix="menu-mask"></div>
+
+
+
+                    <div class="navbar-title" style="background-color:#FFFFFF !important;">
+                        <span id="WorkersTitleLabel" style="color:#000000 !important;font-family:AvenirNextLTW01BoldRegular !important">Swipe to see workers</span>
+                    </div>
+                    <div class="left navbar-button w-nav-button" data-ix="hide-navbar-icons" id="menu-button">
+                        <div class="home-icon navbar-button-icon">
+                            <img src="images/menuBlack.png" style="width:40px !important;height:40px !important;margin-top:-44px !important;" />
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- SLIDE OUT MENU -->
+
+
+
+
+
+            <!-- BODY -->
+            <div class="body" >
+
+
+                <div class="home-content" style="background-color:#FFFFFF !important;" >
+
+
+                    <div id="WorkersSlider" class="home-slider w-slider" data-animation="slide" data-autoplay="1" data-delay="10000" data-duration="500" data-infinite="1" 
+                         data-nav-spacing="5"  >
+
+                        <div id="WorkersPanel" class="w-slider-mask" style="background-color:#FFFFFF !important;" >
+
+
+                            <!--<center id="NoWorkersPanel" style="display:none !important;">
+                                <br/><br/>
+                                <h2 style="font-family:AvenirNextLTW01BoldRegular !important;color:#000000 !important;">No Workers Near By</h2>
+                                <br/><br/>
+                            </center>-->
+
+
+                            <!--<div class="w-slide" style="background-color:white !important;">
+
+                               <div style="width:100% !important;height:180px;background-color:#000000 !important;
+                                margin-left:0px !important;background-image:url(images/constructiontools.jpg);
+                                background-position:center" >
+
+                                    <center>
+                                        <img id="ProfilePicture" src="images/jobzzlogo.png" style="width:96px !important;height:96px !important;margin-top:40px !important;
+                                        border-radius: 50% !important;" />
+
+                                        
+
+                                    </center>
+
+
+
+                                    <div style="width:100px;height:20px;background-color:#FDC603;color:#000000;font-family:AvenirNextLTW01BoldRegular !important;
+                                        margin-left:auto;margin-right:auto;margin-top:24px !important;">
+                                        20 miles away
+                                    </div>
+                                    
+                                   
+                                </div>
+
+
+                                <div style="width:100% !important;">
+                                    <input class="action-button w-button" type="button" value="STEPHEN SMITH"
+                                           style="width:100% !important;height:70px !important;font-size:18px !important;outline:none !important;color:#FFFFFF !important;
+                                           font-family:AvenirNextLTW01BoldRegular !important;">
+                                </div>
+
+
+                                <center>
+                                    <h1 style="font-family:AvenirNextLTW01BoldRegular !important;color:#000000 !important;">$25/h</h1>
+                                    <span style="font-family:AvenirNextLTW01BoldRegular !important;color:#000000 !important;">I CAN HELP WITH</span>
+                                </center>
+
+                              
+
+                                <center>
+                                    <span style="font-family:AvenirNextLTW01RegularRegular !important;color:#000000 !important;">construction</span><br/>
+                                    <span style="font-family:AvenirNextLTW01RegularRegular !important;color:#000000 !important;">farm work</span><br/>
+                                    <span style="font-family:AvenirNextLTW01RegularRegular !important;color:#000000 !important;">landscaping</span><br/>
+
+                                    
+                                </center>
+
+
+
+                                <div style="width:100% !important;position:fixed;bottom:0;">
+
+                                    
+
+                                    <input class="action-button w-button" type="button" value="ORDER"
+                                           style="width:100% !important;height:70px !important;font-size:18px !important;outline:none !important;color:#FDC603 !important;
+                                           font-family:AvenirNextLTW01BoldRegular !important;">
+                                </div>
+
+
+                            </div>
+                            <div class="w-slide" style="background-color:white !important;">
+
+
+                                <div style="width:100% !important;height:180px;background-color:#000000 !important;
+                                margin-left:0px !important;background-image:url(images/constructiontools.jpg);
+                                background-position:center">
+
+                                    <center>
+                                        <img id="ProfilePicture" src="images/favico.ico" style="width:96px !important;height:96px !important;margin-top:40px !important;
+                                        border-radius: 50% !important;" />
+
+
+
+                                    </center>
+
+
+
+                                    <div style="width:100px;height:20px;background-color:#FDC603;color:#000000;font-family:AvenirNextLTW01BoldRegular !important;
+                                        margin-left:auto;margin-right:auto;margin-top:24px !important;">
+                                        20 miles away
+                                    </div>
+
+
+                                </div>
+
+
+                                <div style="width:100% !important;">
+                                    <input class="action-button w-button" type="button" value="STEPHEN SMITH"
+                                           style="width:100% !important;height:70px !important;font-size:18px !important;outline:none !important;color:#FFFFFF !important;
+                                           font-family:AvenirNextLTW01BoldRegular !important;">
+                                </div>
+
+
+                                <center>
+                                    <h1 style="font-family:AvenirNextLTW01BoldRegular !important;color:#000000 !important;">$25/h</h1>
+                                    <span style="font-family:AvenirNextLTW01BoldRegular !important;color:#000000 !important;">I CAN HELP WITH</span>
+                                </center>
+
+
+
+                                <center>
+                                    <span style="font-family:AvenirNextLTW01RegularRegular !important;color:#000000 !important;">construction</span><br />
+                                    <span style="font-family:AvenirNextLTW01RegularRegular !important;color:#000000 !important;">farm work</span><br />
+                                    <span style="font-family:AvenirNextLTW01RegularRegular !important;color:#000000 !important;">landscaping</span><br />
+
+
+                                </center>
+
+
+
+                                <div style="width:100% !important;position:fixed;bottom:0;">
+
+
+
+                                    <input class="action-button w-button" type="button" value="ORDER"
+                                           style="width:100% !important;height:70px !important;font-size:18px !important;outline:none !important;color:#FDC603 !important;
+                                           font-family:AvenirNextLTW01BoldRegular !important;">
+                                </div>
+                               
+
+                            </div>
+                            <div class="w-slide" style="background-color:white !important;">
+
+                                <br /><br />TEST 3
+
+                            </div>-->
+                        </div>
+
+                       
+                        <!--<div class="slider-bullets w-round w-slider-nav"></div>-->
+                    </div>
+                   
+                  
+                </div>
+
+
+            </div>
+            <!-- BODY -->
+
+
+
+
+
+        </div>
+        <div class="loading-mask page-content" id="new-stack">
+            <div class="loading-icon">
+                <div class="icon ion-load-d navbar-button-icon"></div>
+            </div>
+        </div>
+
+
+
+
+        <input id="SelectPictureButtonWidget" type="file" name="SelectPictureButtonWidget" style="visibility:hidden" />
+
+    </section>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/framework.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="scripts/common.js"></script>
+    <script type="text/javascript" src="scripts/workersnearby.js"></script>
+
+
+    <script type="text/javascript">
+        SetUp();
+    </script>
+    <!--[if lte IE 9]><script src="js/placeholders.min.js"></script><![endif]-->
+</body>
+</html>

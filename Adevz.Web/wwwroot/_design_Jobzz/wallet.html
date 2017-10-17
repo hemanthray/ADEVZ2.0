@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Jobzz - Wallet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Webflow">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/framework.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/webfont.js"></script>
+    <script>
+    WebFont.load({
+      google: {
+        families: ["Montserrat:400,700"]
+      }
+    });
+    </script>
+    <script type="text/javascript" src="js/modernizr.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="images/jobzzlogo.png">
+    <link rel="apple-touch-icon" href="images/jobzzlogo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <section class="mobile-wrapper w-section" style="height:350px !important;">
+
+        <div style="width:100%;margin-left:auto;margin-right:auto;height:40px;">
+            <a id="BackButton" onclick="javascript: BackButtonClickHandler();" href="#" style="text-decoration:none !important;">
+                <img src="images/leftBlack.png" style="width:40px;float:left;margin-top:0px !important;" />
+            </a>
+
+        </div>
+
+
+
+
+
+        <div id="SeparatorPanel" style="display:none;">
+
+        </div>
+
+
+
+        <!-- TIPS PANEL -->
+        <div id="TipsPanel" style="width:100% !important;height:80px;">
+
+            <input id="TotalTipsGivenButton" class="action-button w-button" type="button" value=""
+                   style="width:100% !important;height:100% !important;font-size:24px !important;outline:none !important;color:#FDC603 !important;
+                           font-family:AvenirNextLTW01BoldRegular !important;border-color:#FDC603 !important;">
+        </div>
+        <!-- TIPS PANEL -->
+
+        <!-- SPENT PANEL -->
+        <div id="SpentPanel" style="width:100% !important;height:80px;">
+
+            <input id="TotalAmountSpentButton" class="yellowbutton w-button" type="button" value=""
+                   style="width:100% !important;height:100% !important;font-size:24px !important;outline:none !important;color:#000000 !important;
+                       font-family:AvenirNextLTW01BoldRegular !important;">
+        </div>
+        <!-- SPENT PANEL -->
+
+        <!-- ACCOUNT PANEL -->
+        <div id="AccountPanel" style="width:100% !important;height:80px;">
+
+            <input id="AccountBalanceButton" class="action-button w-button" type="button" value=""
+                   style="width:100% !important;height:100% !important;font-size:24px !important;outline:none !important;color:#FDC603 !important;
+                       font-family:AvenirNextLTW01BoldRegular !important;">
+        </div>
+        <!-- ACCOUNT PANEL -->
+
+
+
+
+
+
+
+        <div class="page-content" id="main-stack">
+
+            <!--<br />-->
+
+            <div class="body padding">
+                <div class="w-form" style="margin-top:-10px !important;">
+
+
+                   
+                </div>
+            </div>
+        </div>
+
+
+        <div class="loading-mask page-content stop-loading" id="LoadingPanel">
+            <div class="loading-icon">
+                <div class="icon ion-load-d navbar-button-icon"></div>
+            </div>
+        </div>
+
+
+
+
+        <!-- SIGN UP FOOTER PANEL -->
+        <div style="width:100% !important;position:fixed;bottom:0;">
+            <input id="AddMoneyButton" onclick="javascript: AddMoneyButtonClickHandler();" class="action-button w-button" type="button" value="ADD MONEY"
+                   style="width:100% !important;height:70px !important;font-size:18px !important;outline:none !important;color:#FDC603 !important;font-family:AvenirNextLTW01BoldRegular !important;">
+        </div>
+        <!-- SIGN UP FOOTER PANEL -->
+
+
+
+
+
+
+        <input id="SelectPictureButtonWidget" type="file" name="SelectPictureButtonWidget" style="visibility:hidden" />
+
+
+
+    </section>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/framework.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="scripts/common.js"></script>
+    <script type="text/javascript" src="scripts/wallet.js"></script>
+
+
+    <script type="text/javascript">
+        SetUp();
+    </script>
+
+    <!--[if lte IE 9]><script src="js/placeholders.min.js"></script><![endif]-->
+</body>
+</html>

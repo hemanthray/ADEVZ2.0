@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Jobzz - Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Webflow">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/framework.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/webfont.js"></script>
+    <script>
+    WebFont.load({
+      google: {
+        families: ["Montserrat:400,700"]
+      }
+    });
+    </script>
+    <script type="text/javascript" src="js/modernizr.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="images/jobzzlogo.png">
+    <link rel="apple-touch-icon" href="images/jobzzlogo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <section class="mobile-wrapper w-section" style="height:350px !important;">
+
+        <div style="width:100%;margin-left:auto;margin-right:auto;height:40px;">
+            <a id="BackButton" onclick="javascript: BackButtonClickHandler();" href="#" style="text-decoration:none !important;">
+                <img src="images/leftBlack.png" style="width:40px;float:left;margin-top:0px !important;" />
+            </a>
+
+        </div>
+
+
+
+        <center id="MenuPanel" style="margin-top:0px !important;">
+
+            <input id="ProfileButton" class="whitebutton w-button" type="button" value="PROFILE" onclick="javascript: ProfileButtonClickHandler();"
+                   style="width:100% !important;height:50px !important;font-size:20px !important;font-family:AvenirNextLTW01BoldRegular !important;
+                        border:none !important;text-decoration:none !important;outline:none !important;">
+
+            <input id="JobHistoryButton" class="whitebutton w-button" type="button" value="JOB HISTORY" onclick="javascript: JobHistoryButtonClickHandler();"
+                   style="width:100% !important;height:50px !important;font-size:20px !important;font-family:AvenirNextLTW01BoldRegular !important;
+                        border:none !important;text-decoration:none !important;outline:none !important;margin-top:10px !important;">
+
+
+            <input id="BillingButton" class="whitebutton w-button" type="button" value="BILLING" onclick="javascript: BillingButtonClickHandler();"
+                   style="width:100% !important;height:50px !important;font-size:20px !important;font-family:AvenirNextLTW01BoldRegular !important;
+                        border:none !important;text-decoration:none !important;outline:none !important;margin-top:10px !important;">
+
+
+            <input id="WalletButton" class="whitebutton w-button" type="button" value="WALLET" onclick="javascript: WalletButtonClickHandler();"
+                   style="width:100% !important;height:50px !important;font-size:20px !important;font-family:AvenirNextLTW01BoldRegular !important;
+                        border:none !important;text-decoration:none !important;outline:none !important;margin-top:10px !important;">
+        </center>
+
+
+
+
+
+        
+
+
+        <div class="loading-mask page-content stop-loading" id="LoadingPanel">
+            <div class="loading-icon">
+                <div class="icon ion-load-d navbar-button-icon"></div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/framework.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+
+    <script type="text/javascript" src="scripts/common.js"></script>
+    <script type="text/javascript" src="scripts/account.js"></script>
+
+
+    <script type="text/javascript">
+        SetUp();
+    </script>
+
+    <!--[if lte IE 9]><script src="js/placeholders.min.js"></script><![endif]-->
+</body>
+</html>
