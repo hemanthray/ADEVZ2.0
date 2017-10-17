@@ -57,7 +57,7 @@ namespace Adevz.API.Controllers
         [Route("signout")]
         public async Task<IActionResult> SignOut()
         {
-            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            await HttpContext.SignOutAsync("MyCookieAuthenticationScheme");
             return RedirectToAction("Index", "Home");
         }
 
@@ -94,9 +94,9 @@ namespace Adevz.API.Controllers
                 new Claim(ClaimTypes.NameIdentifier, username),
                 new Claim(ClaimTypes.Name, username)
             };
-            var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+            var identity = new ClaimsIdentity(claims, "MyCookieAuthenticationScheme");
             var principal = new ClaimsPrincipal(identity);
-            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+            await HttpContext.SignInAsync("MyCookieAuthenticationScheme", principal);
         }
     }
 }

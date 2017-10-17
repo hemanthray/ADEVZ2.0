@@ -30,7 +30,7 @@ namespace Adevz.Web
             //        options.AccessDeniedPath = "/Account/Forbidden/";
             //        options.LoginPath = "/auth/signin";
             //    });
-          //  services.AddCookieAuthentication(o => o.LoginPath = "/auth/signin");
+            //  services.AddCookieAuthentication(o => o.LoginPath = "/auth/signin");
 
             //services.AddAuthentication("MyCookieAuthenticationScheme")
             //.AddCookie("MyCookieAuthenticationScheme", options =>
@@ -39,17 +39,24 @@ namespace Adevz.Web
             //    options.LoginPath = "/auth/signin";
             //});
 
-            services.AddAuthentication(options =>
-            {
-                options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-            }).AddCookie("MyCookieAuthenticationScheme", options =>
-            {
-                options.LoginPath = "/auth/signin";
-              //  options.AccessDeniedPath = new PathString("/error?unauth");
-            });
+            //services.AddAuthentication(options =>
+            //{
+            //    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+            //    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+            //    options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+            //    options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+            //}).AddCookie("MyCookieAuthenticationScheme", options =>
+            //{
+            //     options.AccessDeniedPath = "/Account/Forbidden/";
+            //    options.LoginPath = "/auth/signin";
+            //});
+
+            services.AddAuthentication("MyCookieAuthenticationScheme")
+                .AddCookie("MyCookieAuthenticationScheme", options =>
+                {
+                    options.AccessDeniedPath = "/Account/Forbidden/";
+                    options.LoginPath = "/auth/signin";
+                });
             services.AddMemoryCache();
             services.AddSession();
           
