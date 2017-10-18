@@ -60,7 +60,7 @@ namespace Adevz.Web
             services.AddMemoryCache();
             services.AddSession();
           
-            var users = new Dictionary<string, string> { { "sai", "password" }, { "sid", "password" } };
+            var users = new Dictionary<string, string> { { "sai@adevz.com", "password" }, { "sid@adevz.com", "password" } };
             services.AddSingleton<IUserService>(new UserService(users));
             services.AddMvc();
         }

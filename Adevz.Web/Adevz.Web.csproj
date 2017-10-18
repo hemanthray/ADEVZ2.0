@@ -5,6 +5,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="wwwroot\adevz\js\plugins\ckeditor\skins\bootstrapck\.temp\css\dialog.css" />
+    <Content Include="wwwroot\adevz\js\plugins\ckeditor\skins\bootstrapck\.temp\css\dialog_ie.css" />
+    <Content Include="wwwroot\adevz\js\plugins\ckeditor\skins\bootstrapck\.temp\css\dialog_ie7.css" />
+    <Content Include="wwwroot\adevz\js\plugins\ckeditor\skins\bootstrapck\.temp\css\dialog_ie8.css" />
+    <Content Include="wwwroot\adevz\js\plugins\ckeditor\skins\bootstrapck\.temp\css\dialog_iequirks.css" />
+    <Content Include="wwwroot\adevz\js\plugins\ckeditor\skins\bootstrapck\.temp\css\dialog_opera.css" />
+    <Content Include="wwwroot\adevz\js\plugins\ckeditor\skins\bootstrapck\.temp\css\editor.css" />
+    <Content Include="wwwroot\adevz\js\plugins\ckeditor\skins\bootstrapck\.temp\css\editor_gecko.css" />
+    <Content Include="wwwroot\adevz\js\plugins\ckeditor\skins\bootstrapck\.temp\css\editor_ie.css" />
+    <Content Include="wwwroot\adevz\js\plugins\ckeditor\skins\bootstrapck\.temp\css\editor_ie7.css" />
+    <Content Include="wwwroot\adevz\js\plugins\ckeditor\skins\bootstrapck\.temp\css\editor_ie8.css" />
+    <Content Include="wwwroot\adevz\js\plugins\ckeditor\skins\bootstrapck\.temp\css\editor_iequirks.css" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="BCrypt.Net-Next" Version="2.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
   </ItemGroup>

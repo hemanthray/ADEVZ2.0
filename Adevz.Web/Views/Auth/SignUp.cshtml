@@ -1,6 +1,8 @@
 @model Adevz.Web.Models.Auth.SignUpModel
-
-<form class="form-signin"asp-action="SignUp">
+@{
+    Layout = "~/Views/Shared/Register/_layoutsignup.cshtml";
+}
+@*<form class="form-signin"asp-action="SignUp">
     <h2>Please register</h2>
     <label class="sr-only">Username</label>
     <input type="text" class="form-control" placeholder="Username"
@@ -12,5 +14,53 @@
     <input type="password" class="form-control" placeholder="Repeat Password" 
            asp-for="RepeatPassword"/>
     <button class="btn btn-lg btn-block btn-primary" type="submit">Register</button>
-</form>
+</form>*@
 
+<!-- Register Title -->
+<div class="block-title">
+    <div class="block-options pull-right">
+        <a href="/auth/signin" class="btn btn-effect-ripple btn-primary" data-toggle="tooltip" data-placement="left" title="Back to login"><i class="fa fa-user"></i></a>
+    </div>
+    <h2>Register</h2>
+</div>
+<!-- END Register Title -->
+<!-- Register Form -->
+<form id="form-register" asp-action="SignUp"  class="form-horizontal">
+    <div class="form-group">
+        <div class="col-xs-12">
+            <input type="text" id="register-username" name="register-username" class="form-control" placeholder="Username"
+           asp-for="Username">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-xs-12">
+            <input type="text" id="register-email" name="register-email" class="form-control" placeholder="Email">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-xs-12">
+            <input type="password" id="register-password" name="register-password" class="form-control" placeholder="Password"
+           asp-for="Password">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-xs-12">
+            <input type="password" id="register-password-verify" name="register-password-verify" class="form-control" 
+                   placeholder="Repeat Password" 
+           asp-for="RepeatPassword">
+        </div>
+    </div>
+    <div class="form-group form-actions">
+        <div class="col-xs-6">
+            <label class="csscheckbox csscheckbox-primary" data-toggle="tooltip" title="Agree to the terms">
+                <input type="checkbox" id="register-terms" name="register-terms">
+                <span></span>
+            </label>
+            <a href="#modal-terms" data-toggle="modal">Terms</a>
+        </div>
+        <div class="col-xs-6 text-right">
+            <button type="submit" class="btn btn-effect-ripple btn-success"><i class="fa fa-plus"></i> Create Account</button>
+        </div>
+    </div>
+</form>
+<!-- END Register Form -->

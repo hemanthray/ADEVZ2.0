@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adevz.Web", "Adevz.Web\Adevz.Web.csproj", "{B4C3C526-4E19-4616-B2BF-1AC014DD9581}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adevz.Web", "Adevz.Web\Adevz.Web.csproj", "{B4C3C526-4E19-4616-B2BF-1AC014DD9581}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adevz.API", "Adevz.API\Adevz.API.csproj", "{3C905A5A-9501-4177-B249-2D82D85D8FC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adevz.API", "Adevz.API\Adevz.API.csproj", "{3C905A5A-9501-4177-B249-2D82D85D8FC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
